@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: #493628;" class="boby">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <img src="images/logo-name.png" alt="" height="50px" width="50px">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse  " id="navbarNav">
+        <ul class="navbar-nav ms-5">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="#review">Review</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="ms-auto d-flex gap-4">
+        <i class="fa-solid fa-magnifying-glass fs-4" style="color: white;"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h3>Welcome!</h3>
+        <h1>We serve the richest coffee in the city!</h1>
+        <a href="#" class="btn btn-dark" onclick="clickme()">Order Now</a>
+      </div>
+    </div>
+
+    <div class="hidden-menu" id="show">
+      <div class="menu-container">
+        <i class="fa-solid fa-arrow-left" onclick="cancel()"></i>
+        <div class="header">
+          <h1>Menu</h1>
+          <img src="images/menu.png" alt="Menu Cup" class="menu-image">
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <div class="section">
+              <h2>☕ Coffee</h2>
+              <ul>
+                <li><a href="#">Espresso - $5</a></li>
+                <li><a href="#">Double Espresso - $5</a></li>
+                <li><a href="#">Latte - $5</a></li>
+                <li><a href="#">Americano - $5</a></li>
+                <li><a href="#">Macchiato - $5</a></li>
+                <li><a href="#">Flat White - $5</a></li>
+                <li><a href="#">Cappuccino - $5</a></li>
+              </ul>
+            </div>
+
+            <div class="section">
+              <h2>🍵 Tea</h2>
+              <ul>
+                <li><a href="#">Lemon Tea - $5</a></li>
+                <li><a href="#">Mango Tea - $5</a></li>
+                <li><a href="#">Jasmine - $5</a></li>
+                <li><a href="#">Green Tea - $5</a></li>
+                <li><a href="#">Mint Tea - $5</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="section">
+              <h2>🥤 Non-Coffee</h2>
+              <ul>
+                <li><a href="#">Hot Chocolate - $5</a></li>
+                <li><a href="#">Milkshake - $5</a></li>
+                <li><a href="#">Smoothie - $5</a></li>
+                <li><a href="#">Lemonade - $5</a></li>
+                <li><a href="#">Vanilla Milkshake - $5</a></li>
+              </ul>
+            </div>
+
+            <div class="section">
+              <h2>🍰 Desserts</h2>
+              <ul>
+                <li><a href="#">Strawberry Waffle - $5</a></li>
+                <li><a href="#">Cinnamon Roll - $5</a></li>
+                <li><a href="#">Lemon Pie - $5</a></li>
+                <li><a href="#">Chocolate Waffle - $5</a></li>
+                <li><a href="#">Brownies - $5</a></li>
+                <li><a href="#">Cheesecake - $5</a></li>
+                <li><a href="#">Chocolate Muffin - $5</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- About section -->
+  <div class="container-fluid abt-section" id="about">
+    <div class="menu">
+      <h1 style="color: white;">
+        About</h1>
+      <h1 style="color: #1A120B;">US</h1>
+    </div>
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+        <!-- Image-->
+        <div class="col-md-5 text-center">
+          <img src="https://images.wallpaperscraft.com/image/single/coffee_cup_foam_131921_2780x2780.jpg" alt="Coffee"
+            class="img-fluid about-img" />
+        </div>
+
+        <!-- Text Section -->
+        <div class="col-md-7 para text-light p-4">
+          <h3>What Makes Our Coffee Special?</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti,
+            veniam iste cumque dolores fugiat quod quisquam nobis beatae vel
+            perferendis quis nostrum accusamus est labore maiores ratione eveniet
+            ipsum iure.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti,
+            veniam iste cumque dolores fugiat quod quisquam nobis beatae vel
+            perferendis quis nostrum.
+          </p>
+          <button class="btn ">Read more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--cards-->
+  <div class="menu" id="menu">
+    <h1 style="color: white;">
+      Our</h1>
+    <h1>MENU</h1>
+  </div>
+  <div class="card-ctn px-lg-5">
+    <div class="row justify-content-center gy-4 gx-0 count-3">
+      <div class="card card-hover p-0 d-flex align-items-center text-center mx-auto" style="width: 16rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvCQdDDow8kGtcjyNtraN18GimjALYDXF0dg&s"
+          class="card-img-top rounded-circle" alt="Lungo Coffee"
+          style="width: 120px; height: 120px; object-fit: cover; margin-top: 10px;">
+        <div class="card-body d-flex flex-column align-items-center">
+          <h5 class="card-title">Lungo Coffee</h5>
+          <p class="card-text">Rating: ★★★★☆ <br> ₹199</p>
+          <a href="#" class="btn btn-primary">Buy now</a>
+        </div>
+      </div>
+
+      <div class="card card-hover p-0 d-flex align-items-center text-center mx-auto" style="width: 16rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2-5uP37k03rdv2rHY8Rl0FEk8EqwwXrAlOA&s"
+          class="card-img-top rounded-circle" alt="Dalgona Coffee"
+          style="width: 120px; height: 120px; object-fit: cover; margin-top: 10px;">
+        <div class="card-body d-flex flex-column align-items-center">
+          <h5 class="card-title">Dalgona Coffee</h5>
+          <p class="card-text">Rating: ★★★★☆ <br> ₹100</p>
+          <a href="#" class="btn btn-primary">Buy now</a>
+        </div>
+      </div>
+
+      <div class="card card-hover p-0 d-flex align-items-center text-center mx-auto" style="width: 16rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReGnZrGD5BHlwrxCQYA8Ln7lHvVl8s0DuGaQ&s"
+          class="card-img-top rounded-circle" alt="Iced Coffee"
+          style="width: 120px; height: 120px; object-fit: cover; margin-top: 10px;">
+        <div class="card-body d-flex flex-column align-items-center">
+          <h5 class="card-title">Iced Coffee</h5>
+          <p class="card-text">Rating: ★★★★☆ <br> ₹100</p>
+          <a href="#" class="btn btn-primary">Buy now</a>
+        </div>
+      </div>
+
+      <div class="card card-hover p-0 d-flex align-items-center text-center mx-auto" style="width: 16rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCaH810Ha74pTdJu2YNplqgs3x50OvvnZ_wg&s"
+          class="card-img-top rounded-circle" alt="Filter Coffee"
+          style="width: 120px; height: 120px; object-fit: cover; margin-top: 10px;">
+        <div class="card-body d-flex flex-column align-items-center">
+          <h5 class="card-title">Filter Coffee</h5>
+          <p class="card-text">Rating: ★★★★☆ <br> ₹100</p>
+          <a href="#" class="btn btn-primary">Buy now</a>
+        </div>
+      </div>
+
+      <div class="card card-hover p-0 d-flex align-items-center text-center mx-auto" style="width: 16rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCaH810Ha74pTdJu2YNplqgs3x50OvvnZ_wg&s"
+          class="card-img-top rounded-circle" alt="Filter Coffee"
+          style="width: 120px; height: 120px; object-fit: cover; margin-top: 10px;">
+        <div class="card-body d-flex flex-column align-items-center">
+          <h5 class="card-title">Filter Coffee</h5>
+          <p class="card-text">Rating: ★★★★☆ <br> ₹100</p>
+          <a href="#" class="btn btn-primary">Buy now</a>
+        </div>
+      </div>
+
+      <div class="card card-hover p-0 d-flex align-items-center text-center mx-auto" style="width: 16rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCaH810Ha74pTdJu2YNplqgs3x50OvvnZ_wg&s"
+          class="card-img-top rounded-circle" alt="Filter Coffee"
+          style="width: 120px; height: 120px; object-fit: cover; margin-top: 10px;">
+        <div class="card-body d-flex flex-column align-items-center">
+          <h5 class="card-title">Filter Coffee</h5>
+          <p class="card-text">Rating: ★★★★☆ <br> ₹100</p>
+          <a href="#" class="btn btn-primary">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--product section-->
+  <div class="menu" id="product">
+    <h1 style="color: white;">
+      Our</h1>
+    <h1>PRODUCT</h1>
+  </div>
+  <div class="container2  m-auto">
+    <div class="row  gy-4 gx-lg-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card card2-hover p-0 text-center card-custom"
+          style="width: 18rem; background-color: rgba(0, 0, 0, 0.451);; color: white; position: relative;">
+          <div class="icons" style="display: flex; justify-content: center; gap:10px; margin-top: 20px;">
+            <i class="fas fa-shopping-cart  p-2"></i>
+            <i class="fas fa-heart  p-2"></i>
+            <i class="fas fa-eye  p-2"></i>
+          </div>
+          <img
+            src="https://previews.123rf.com/images/vivilweb/vivilweb1307/vivilweb130700001/20786885-clear-plastic-bag-of-coffee-beans-isolated-on-white-background.jpg"
+            class="card-img-top about-img" alt="Lungo Coffee"
+            style="width: 80%; height: 200px; object-fit: cover; margin: auto">
+          <div class="card-body">
+            <h5 class="card-title">Coffee Packet</h5>
+            <p class="card-text" style="color: red;">★★★★★</p>
+            <p class="card-text">₹150.99/- <del>₹199</del></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card card2-hover p-0 text-center card-custom"
+          style="width: 18rem; background-color: rgba(0, 0, 0, 0.451);; color: white; position: relative;">
+          <div class="icons" style="display: flex; justify-content: center; gap:10px; margin-top: 20px;">
+            <i class="fas fa-shopping-cart  p-2"></i>
+            <i class="fas fa-heart  p-2"></i>
+            <i class="fas fa-eye  p-2"></i>
+          </div>
+          <img
+            src="https://rukminim2.flixcart.com/image/850/1000/jjq18y80/coffee/j/n/x/26-4-via-instant-medium-roast-coffee-pike-place-roast-8-packets-original-imaf78h45xgeb8sv.jpeg?q=20&crop=false"
+            class="card-img-top about-img" alt="Lungo Coffee"
+            style="width: 80%; height: 200px; object-fit: cover; margin: auto">
+          <div class="card-body">
+            <h5 class="card-title">Coffee Packet</h5>
+            <p class="card-text" style="color: red;">★★★★★</p>
+            <p class="card-text">₹150.99/- <del>₹199</del></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card card2-hover p-0 text-center card-custom"
+          style="width: 18rem; background-color: rgba(0, 0, 0, 0.451);; color: white; position: relative;">
+          <div class="icons" style="display: flex; justify-content: center; gap:10px; margin-top: 20px;">
+            <i class="fas fa-shopping-cart  p-2"></i>
+            <i class="fas fa-heart  p-2"></i>
+            <i class="fas fa-eye  p-2"></i>
+          </div>
+          <img
+            src="https://c8.alamy.com/comp/2E9KY3Y/packet-of-cafe-direct-fairtrade-intense-dark-roast-ground-coffee-for-a-richer-drinking-experience-on-a-white-background-2E9KY3Y.jpg"
+            class="card-img-top about-img" alt="Lungo Coffee"
+            style="width: 80%; height: 200px; object-fit: cover; margin: auto">
+          <div class="card-body">
+            <h5 class="card-title">Coffee Packet</h5>
+            <p class="card-text" style="color: red;">★★★★★</p>
+            <p class="card-text">₹150.99/- <del>₹199</del></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Customer review-->
+  <div class="menu" id="review">
+    <h1 style="color: white;">
+      Customer</h1>
+    <h1>REVIEW</h1>
+  </div>
+  <div class="container3 px-5 px-lg-5">
+    <div class="row justify-content-center gy-4 gx-lg-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card card3-hover p-0 text-center">
+          <p class="card-text m-2">" I expected to have a so-so experience, but the coffee beans were perfect!
+            Definitely
+            recommend! "</p>
+          <img
+            src="https://i.redd.it/today-is-october-10-happy-birthday-naruto-uzumaki-btw-v0-ov6g99si9btb1.jpg?width=735&format=pjpg&auto=webp&s=774f28689976e2664f99aba41a9ba46196962546"
+            class="card-img-top rounded-circle" alt="Lungo Coffee"
+            style="width: 120px; height: 120px; object-fit: cover; margin: auto">
+          <div class="card3-body">
+            <h5 class="card-title">Naruto Uzumaki</h5>
+            <p class="card-text" style="color: red;">★★★★★</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card card3-hover p-0 text-center">
+          <p class="card-text m-2">" The quality of the beans is consistently high. I appreciate the care put into the
+            roast. Best
+            coffee ever! "</p>
+          <img src="https://miro.medium.com/v2/resize:fit:1200/0*j7sVnq-dE0XWdS12.jpeg"
+            class="card-img-top rounded-circle" alt="Lungo Coffee"
+            style="width: 120px; height: 120px; object-fit: cover; margin: auto">
+          <div class="card3-body">
+            <h5 class="card-title">Monkey D Luffy</h5>
+            <p class="card-text" style="color: red;">★★★★★</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card card3-hover p-0 text-center">
+          <p class="card-text m-2"> " I've been ordering beans for years. The service is excellent, and the coffee
+            tastes amazing
+            every time. "</p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrCUuUENvLJM6Ui5QfyrvYydbBYrycrudRDA&s"
+            class="card-img-top rounded-circle" alt="Lungo Coffee"
+            style="width: 120px; height: 120px; object-fit: cover; margin: auto">
+          <div class="card3-body">
+            <h5 class="card-title">Kim Dokja</h5>
+            <p class="card-text" style="color: red;">★★★★★</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--map and form-->
+  <div class="menu" id="contact">
+    <h1 style="color: white;">Contact</h1>
+    <h1>US</h1>
+  </div>
+  <div class="container4 ">
+    <div class="row g-5 justify-content-center">
+      <!-- map-->
+      <div class=" col-12 col-md-5 text-center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241223.11391300827!2d72.56502312499997!3d19.146611099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b74af7681dc3%3A0xa0bf0ec6fb34e33c!2sThird%20Wave%20Coffee!5e0!3m2!1sen!2sin!4v1740336998373!5m2!1sen!2sin"
+          class="rounded-3" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- info-->
+      <div class="col-12 col-md-5 para  text-light rounded-3 p-4 form-contain">
+        <div class="contact-form text-center">
+          <h2 class="mt-3 mb-4">GET IN TOUCH</h2>
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+            <input type="tel" class="form-control" placeholder="Phone No">
+          </div>
+          <button class="btn btn-primary mt-2">Contact Now</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--blogs-->
+  <div class="menu" id="blog">
+    <h1 style="color: white;">Our</h1>
+    <h1>Blog</h1>
+  </div>
+  <div class="container5 px-5 px-lg-5">
+    <div class="row justify-content-center gy-4 gx-lg-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card card5-hover p-0 text-center">
+          <img
+            src="https://i.redd.it/today-is-october-10-happy-birthday-naruto-uzumaki-btw-v0-ov6g99si9btb1.jpg?width=735&format=pjpg&auto=webp&s=774f28689976e2664f99aba41a9ba46196962546"
+            class="card-img-top img-fluid about-img" alt="Lungo Coffee"
+            style="width: 100%; height: 200px;object-fit: cover; margin: auto">
+          <div class="card5-body">
+            <p class="card-text m-2">" I expected to have a so-so experience, but the coffee beans were perfect!
+              Definitely
+              recommend! "</p>
+            <p class="card-title">By Admin / 3rd July 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card card5-hover p-0 text-center">
+          <img src="https://miro.medium.com/v2/resize:fit:1200/0*j7sVnq-dE0XWdS12.jpeg" class="card-img-top about-img"
+            alt="Lungo Coffee" style="width: 100%; height: 200px; object-fit: cover; margin: auto">
+          <div class="card5-body">
+            <p class="card-text m-2">" The quality of the beans is consistently high. I appreciate the care put into the
+              roast. Best
+              coffee ever! "</p>
+            <p class="card-title">By Admin / 3rd July 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div class="card card5-hover p-0 text-center">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrCUuUENvLJM6Ui5QfyrvYydbBYrycrudRDA&s"
+            class="card-img-top about-img" alt="Lungo Coffee"
+            style="width: 100%; height: 200px; object-fit: cover; margin: auto">
+          <div class="card5-body">
+            <p class="card-text m-2"> " I've been ordering beans for years. The service is excellent, and the coffee
+              tastes amazing
+              every time. "</p>
+            <p class="card-title">By Admin / 3rd July 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class=" m-5 d-flex justify-content-center gap-4">
+      <i class="fa-brands fa-square-instagram" style="height: 40px; width: 40px; border-radius: 50%; background-color: rgba(0, 0, 0, 0.451);;
+           display: flex; justify-content: center; align-items: center; color:white; border: 1px solid white;"></i>
+      <i class="fa-brands fa-github" style="height: 40px; width: 40px; border-radius: 50%; background-color: rgba(0, 0, 0, 0.451);;
+           display: flex; justify-content: center; align-items: center; color: white; border: 1px solid white;"></i>
+      <i class="fa-brands fa-linkedin" style="height: 40px; width: 40px; border-radius: 50%; background-color: rgba(0, 0, 0, 0.451);;
+           display: flex; justify-content: center; align-items: center; color: white; border: 1px solid white;"></i>
+    </div>
+    <div class="footer-btn m-5 d-flex justify-content-center gap-4">
+      <button><a href="#home">Home</a></button>
+      <button><a href="#about">About</a></button>
+      <button><a href="#menu">Menu</a></button>
+      <button><a href="#product">Product</a></button>
+      <button><a href="#review">Review</a></button>
+      <button><a href="#contact">Contact</a></button>
+      <button><a href="#blog">Blog</a></button>
+
+    </div>
+    <div class=" m-5 d-flex justify-content-center creator">
+      <p style="color: white;"><i class="fa-regular fa-copyright" style="color: white;"></i>2025. Created by Asmita</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
